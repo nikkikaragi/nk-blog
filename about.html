@@ -28,15 +28,17 @@
 
     <div class="about-card">
 
-      <!-- ---- YOUR PHOTO ----
-           Replace the src with your own image.
-           Recommended: put it at assets/images/about/about-photo.jpg
-           Change the alt text to your name. -->
       <div class="about-photo">
-        <img
-          src="assets/images/about/about-photo.jpg"
-          alt="Your Name — About Photo"
-        >
+        <div class="about-slideshow">
+          <div class="slideshow-track" id="slideshow-track">
+            <img src="assets/images/about/purple_selfie.jpg" alt="Purple selfie">
+            <img src="assets/images/about/me_spetses.jpg" alt="Me in Spetses">
+            <img src="assets/images/about/young_me_eating.jpg" alt="Young me eating">
+          </div>
+          <button class="slide-btn slide-prev" id="slide-prev">&#8249;</button>
+          <button class="slide-btn slide-next" id="slide-next">&#8250;</button>
+          <div class="slideshow-dots" id="slideshow-dots"></div>
+        </div>
       </div>
 
       <!-- ---- ABOUT TEXT ---- -->
@@ -70,6 +72,38 @@
   <script src="scripts/topics-data.js"></script>
   <script>var ROOT_PATH = '';</script>
   <script src="scripts/banner-html.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var track   = document.getElementById('slideshow-track');
+      var dotsBox = document.getElementById('slideshow-dots');
+      if (!track) return;
+
+      var images  = track.querySelectorAll('img');
+      var total   = images.length;
+      var current = 0;
+
+      images.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.className = 'slideshow-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+        dot.addEventListener('click', function () { goTo(i); });
+        dotsBox.appendChild(dot);
+      });
+
+      function goTo(index) {
+        current = (index + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dotsBox.querySelectorAll('.slideshow-dot').forEach(function (d, i) {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      document.getElementById('slide-prev').addEventListener('click', function () { goTo(current - 1); });
+      document.getElementById('slide-next').addEventListener('click', function () { goTo(current + 1); });
+
+    });
+  </script>
 
 </body>
 </html>
