@@ -38,10 +38,10 @@ function renderCards(containerId, filterTopic) {
   posts.forEach(function (post) {
 
     /* ---- Build image OR excerpt block ---- */
-    html += '<a class="blog-card" href="' + post.file + '">';
+    html += '<a class="blog-card" href="' + ROOT_PATH + post.file + '">';
 
     if (post.image) {
-      html += '<img class="blog-card-image" src="' + post.image + '" alt="' + post.title + '" loading="lazy">';
+      html += '<img class="blog-card-image" src="' + ROOT_PATH + post.image + '" alt="' + post.title + '" loading="lazy">';
     }
 
     html += '<div class="blog-card-body">';
