@@ -13,8 +13,8 @@
   --color-page-bg: #ffffff;             /* Change main page background here */
 
   /* --- BLOG POST CARDS (the little squares on home/topic pages) --- */
-  --color-card-bg: #fce4ec;             /* Change blog card background color here */
-  --color-card-border: #f48fb1;         /* Change blog card border color here */
+  --color-card-bg: #effde9;             /* Change blog card background color here */
+  --color-card-border: #c2f4a0;         /* Change blog card border color here */
   --color-card-shadow: rgba(244,143,177,0.25); /* Change blog card shadow color here */
   --color-card-title: #222222;          /* Change blog card title text color here */
   --color-card-date: #888888;           /* Change blog card date text color here */
@@ -28,7 +28,7 @@
 
   /* --- ABOUT PAGE --- */
   --color-about-card-bg: #fce4ec;       /* Change about card background here */
-  --color-about-card-border: #f8bbd0;   /* Change about card border here */
+  --color-about-card-border: #d5f8bb;   /* Change about card border here */
 
   /* --- BLOG POST PAGE --- */
   --color-post-card-bg: #fce4ec;        /* Change blog post page card background here */

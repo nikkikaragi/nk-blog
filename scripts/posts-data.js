@@ -21,62 +21,18 @@
 var POSTS = [
 
   /* ---- EXAMPLE POSTS — replace with your real posts ---- */
-
+/* ---- ADD YOUR NEXT POST HERE ---- with a comma after }*/
   {
-    id:       'post-1',
-    title:    'My Favorite Summer Table Settings',
-    date:     '12 June 2026',
-    dateSort: '2026-06-12',
+    id:       '26-06-12_first-post',
+    title:    'First Post',
+    date:     '19 June 2026',
+    dateSort: '2026-06-19',
     topic:    'lifestyle',
-    image:    'assets/images/posts/post-1/thumbnail.jpg',
-    excerpt:  'Creating a beautiful outdoor dinner table does not have to cost a fortune. Here are my go-to tips for a dreamy summer spread...',
-    file:     'posts/post-1.html'
-  },
-
-  {
-    id:       'post-2',
-    title:    'My Morning Workout Routine (Long Version That Wraps)',
-    date:     '9 June 2026',
-    dateSort: '2026-06-09',
-    topic:    'fitness',
-    image:    'assets/images/posts/post-2/thumbnail.jpg',
-    excerpt:  'Starting the day with movement changed everything for me. Here is exactly what I do every morning before 8am...',
-    file:     'posts/post-2.html'
-  },
-
-  {
-    id:       'post-3',
-    title:    'My Everyday Skincare Routine',
-    date:     '28 May 2026',
-    dateSort: '2026-05-28',
-    topic:    'beauty',
-    image:    'assets/images/posts/post-3/thumbnail.jpg',
-    excerpt:  'Five simple steps for glowy skin without spending a fortune on products...',
-    file:     'posts/post-3.html'
-  },
-
-  {
-    id:       'post-4',
-    title:    'Best Protein Snacks for Long Hikes (Another Long Title Example)',
-    date:     '20 May 2026',
-    dateSort: '2026-05-20',
-    topic:    'fitness',
-    image:    null,    /* No image — excerpt text will show on the card instead */
-    excerpt:  'After testing dozens of snacks on the trail, here are the ones that actually keep me going without slowing me down...',
-    file:     'posts/post-4.html'
-  },
-
-  {
-    id:       'post-5',
-    title:    'Hosting a Girls Brunch at Home',
-    date:     '10 May 2026',
-    dateSort: '2026-05-10',
-    topic:    'lifestyle',
-    image:    'assets/images/posts/post-5/thumbnail.jpg',
-    excerpt:  'Everything you need to throw the most fun, low-stress brunch with your closest friends...',
-    file:     'posts/post-5.html'
+    image:    'assets/images/posts/26-06-12_first-post/phonto.jpg',
+    excerpt:  'Eatnektarine&#39;s first blog post.',
+    file:     'posts/26-06-12_first-post.html'
   }
 
-  /* ---- ADD YOUR NEXT POST HERE ---- */
+  
 
 ];

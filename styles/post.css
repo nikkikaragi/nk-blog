@@ -89,6 +89,38 @@
   object-fit: cover;
 }
 
+/* Centered smaller image (good for phone screenshots, portraits) */
+.post-image-center {
+  width: 35%;                /* Change width here — 50% of post width */
+  margin: 24px auto;
+  display: block;
+}
+
+.post-image-center img { /* whole container width */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Two images side by side */
+.post-image-row {
+  display: flex;
+  gap: 16px;                 /* Change gap between images here */
+  margin: 24px 0;
+}
+
+.post-image-row img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Clears float after a floated image */
+.post-clear {
+  clear: both;
+}
 /* Clearfix so floats don't overflow */
 .post-body::after {
   content: '';
