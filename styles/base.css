@@ -1,0 +1,52 @@
+/* ============================================================
+   BASE.CSS — Global resets and base styles.
+   These apply to every page. Change carefully.
+   ============================================================ */
+
+/* Box-sizing reset — makes padding/border part of element width */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base HTML/body */
+html {
+  font-size: 16px;              /* Change root font size here (affects rem units) */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  color: var(--color-text-primary);
+  background-color: var(--color-page-bg);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Make images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove default anchor styles */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+/* Sticky top — banner stays at top of viewport on scroll */
+.site-header {
+  position: sticky;             /* Change to 'relative' if you don't want sticky banner */
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}

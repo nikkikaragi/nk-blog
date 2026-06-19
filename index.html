@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Change site title here -->
+  <title>NK Blog — Home</title>
+
+  <!-- =====================================================
+       STYLESHEETS — order matters, do not rearrange
+       ===================================================== -->
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/colors.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/banner.css">
+  <link rel="stylesheet" href="styles/cards.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+
+  <!-- Favicon — change to your own favicon path -->
+  <!-- <link rel="icon" href="assets/images/logo/favicon.ico"> -->
+</head>
+
+<body>
+
+  <!-- =====================================================
+       SITE HEADER — banner is injected here by banner-html.js
+       ===================================================== -->
+  <div id="site-header"></div>
+
+  <!-- =====================================================
+       MAIN CONTENT
+       ===================================================== -->
+  <main class="page-content">
+
+    <!-- Blog cards grid — filled dynamically by cards.js -->
+    <!-- All posts from posts-data.js appear here, newest first -->
+    <div class="cards-grid" id="home-cards-grid"></div>
+
+  </main>
+
+  <!-- =====================================================
+       SCRIPTS — load data first, then renderers, then banner
+       ===================================================== -->
+
+  <!-- Data files — edit these to add posts and topics -->
+  <script src="scripts/posts-data.js"></script>
+  <script src="scripts/topics-data.js"></script>
+
+  <!-- Renderer scripts -->
+  <script src="scripts/cards.js"></script>
+
+  <!-- Banner injector — ROOT_PATH stays '' for root-level pages -->
+  <script>var ROOT_PATH = '';</script>
+  <script src="scripts/banner-html.js"></script>
+
+  <!-- Render ALL posts on home page (no topic filter) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      renderCards('home-cards-grid', null);  // null = show all topics
+    });
+  </script>
+
+</body>
+</html>

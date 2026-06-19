@@ -1,0 +1,112 @@
+/* ============================================================
+   POST.CSS — Styles for individual blog post pages
+   ============================================================ */
+
+/* ---- BLOG POST WRAPPER ---- */
+
+.post-wrapper {
+  background-color: var(--color-post-card-bg);        /* Change post card bg in colors.css */
+  border: 1px solid var(--color-post-card-border);    /* Change post card border in colors.css */
+  border-radius: 12px;                                /* Change post card corner radius here */
+  max-width: 900px;                                   /* Change post max width here */
+  margin: 40px auto 60px;                             /* Change post vertical margin here */
+  padding: 40px 48px;                                 /* Change post inner padding here */
+  box-sizing: border-box;
+}
+
+/* ---- POST HEADER ---- */
+
+.post-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size-h1);
+  color: var(--color-text-primary);
+  margin: 0 0 6px 0;
+}
+
+.post-meta {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin: 0 0 28px 0;
+}
+
+.post-meta a {
+  color: var(--color-link-hover);
+  text-decoration: none;
+}
+
+/* ---- POST BODY TEXT ---- */
+
+.post-body {
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+}
+
+.post-body p {
+  margin: 0 0 1.4em 0;
+  text-indent: 2em;                                   /* Change paragraph indent here (or 0) */
+}
+
+.post-body p:first-child {
+  text-indent: 2em;
+}
+
+/* ---- POST IMAGES ---- */
+
+/* Image floated right next to text */
+.post-image-right {
+  float: right;
+  margin: 0 0 20px 32px;                              /* Change image margin here */
+  width: 40%;                                         /* Change float image width here */
+  max-width: 340px;
+}
+
+/* Image floated left next to text */
+.post-image-left {
+  float: left;
+  margin: 0 32px 20px 0;
+  width: 40%;
+  max-width: 340px;
+}
+
+/* Full-width image */
+.post-image-full {
+  width: 100%;
+  margin: 24px 0;
+}
+
+/* All post images share these base styles */
+.post-image-right img,
+.post-image-left img,
+.post-image-full img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;                                 /* Change post image corner radius here */
+  display: block;
+  object-fit: cover;
+}
+
+/* Clearfix so floats don't overflow */
+.post-body::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* ---- BACK LINK ---- */
+
+.post-back-link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-link-hover);
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.post-back-link:hover {
+  text-decoration: underline;
+}

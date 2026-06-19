@@ -1,0 +1,57 @@
+/* ============================================================
+   FONTS.CSS — All font choices live here.
+   Swap out any font-family or import URL to change fonts site-wide.
+   ============================================================ */
+
+/* --- FONT IMPORTS ---
+   To use a Google Font:
+   1. Go to fonts.google.com and find a font you like
+   2. Copy the @import URL and paste it below, replacing the existing one
+   ------------------------------------------------------------ */
+
+/* Change display/heading font import here */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap');
+
+/* Change body font import here */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+
+/* ============================================================
+   FONT VARIABLES — Used across all CSS files
+   ============================================================ */
+
+:root {
+
+  /* --- BANNER / NAV FONT --- */
+  --font-nav: 'Caveat', cursive;           /* Change banner nav font here */
+  --font-nav-size: 1.6rem;                 /* Change banner nav font size here */
+  --font-nav-weight: 600;                  /* Change banner nav font weight here */
+
+  /* --- BLOG CARD TITLE FONT --- */
+  --font-card-title: 'Caveat', cursive;    /* Change blog card title font here */
+  --font-card-title-size: 1.2rem;          /* Change blog card title size here */
+  --font-card-title-weight: 600;           /* Change blog card title weight here */
+
+  /* --- BLOG CARD DATE FONT --- */
+  --font-card-date: 'Lato', sans-serif;    /* Change blog card date font here */
+  --font-card-date-size: 0.85rem;          /* Change blog card date size here */
+
+  /* --- TOPIC CARD LABEL FONT --- */
+  --font-topic-label: 'Lato', sans-serif;  /* Change topic card label font here */
+  --font-topic-label-size: 1.05rem;        /* Change topic card label size here */
+
+  /* --- PAGE HEADINGS (h1, h2) --- */
+  --font-heading: 'Caveat', cursive;       /* Change page heading font here */
+  --font-heading-size-h1: 2.2rem;          /* Change H1 size here */
+  --font-heading-size-h2: 1.6rem;          /* Change H2 size here */
+
+  /* --- BODY / PARAGRAPH TEXT --- */
+  --font-body: 'Lato', sans-serif;         /* Change body paragraph font here */
+  --font-body-size: 1.05rem;              /* Change body font size here */
+  --font-body-line-height: 1.8;           /* Change body line height here */
+
+  /* --- ABOUT PAGE --- */
+  --font-about-heading: 'Caveat', cursive; /* Change About page heading font here */
+  --font-about-body: 'Lato', sans-serif;   /* Change About page body font here */
+
+}

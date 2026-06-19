@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NK Blog — Topics</title>
+  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/colors.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/banner.css">
+  <link rel="stylesheet" href="styles/cards.css">
+  <link rel="stylesheet" href="styles/topics.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main class="page-content">
+    <h1 class="topics-page-title">Topics</h1>
+    <!-- Topic cards injected here by topics.js -->
+    <div class="topics-grid" id="topics-grid"></div>
+  </main>
+
+  <script src="scripts/posts-data.js"></script>
+  <script src="scripts/topics-data.js"></script>
+  <script src="scripts/topics.js"></script>
+  <script>var ROOT_PATH = '';</script>
+  <script src="scripts/banner-html.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      renderTopics('topics-grid');
+    });
+  </script>
+
+</body>
+</html>

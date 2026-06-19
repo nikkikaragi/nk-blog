@@ -1,0 +1,176 @@
+/* ============================================================
+   BANNER.CSS — Styles for the top banner / navigation bar.
+   Applies to desktop and mobile layouts.
+   ============================================================ */
+
+/* ---- DESKTOP BANNER ---- */
+
+.banner {
+  /* Change banner background color in colors.css → --color-banner-bg */
+  background-color: var(--color-banner-bg);
+
+  /* Optional: use a banner background IMAGE instead of a color.
+     Uncomment the lines below and set the image path.
+     Comment out background-color above if using an image. */
+  /* background-image: url('../assets/images/banner/banner-bg.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;        /* centers the logo */
+  position: relative;
+  padding: 10px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80px;               /* Change banner height here */
+}
+
+/* Nav links sit on either side of the logo */
+.banner-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;                      /* Change spacing between nav items here */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  justify-content: center;
+  pointer-events: none;           /* let clicks pass through to links */
+}
+
+.banner-nav a {
+  pointer-events: all;
+  font-family: var(--font-nav);
+  font-size: var(--font-nav-size);
+  font-weight: var(--font-nav-weight);
+  color: var(--color-banner-text);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.banner-nav a:hover {
+  color: var(--color-link-hover);  /* Change nav hover color in colors.css */
+}
+
+/* Logo image centered in banner */
+.banner-logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.banner-logo img {
+  height: 64px;                   /* Change logo size here */
+  width: auto;
+  display: block;
+}
+
+/* Space out Home/About/Topics around the logo */
+.nav-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 40px;
+  gap: 40px;
+}
+
+.banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+/* ---- MOBILE BANNER ---- */
+
+.mobile-banner {
+  display: none;                  /* Hidden on desktop — shown in responsive.css */
+  background-color: var(--color-banner-bg);
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  min-height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mobile-banner-logo img {
+  height: 44px;                   /* Change mobile logo size here */
+  width: auto;
+}
+
+/* Hamburger icon — three dashes */
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: var(--color-banner-text);  /* Change hamburger bar color in colors.css */
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+/* Mobile slide-in menu overlay */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: var(--color-mobile-menu-bg);
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  font-family: var(--font-nav);
+  font-size: 2.2rem;              /* Change mobile menu link size here */
+  font-weight: 600;
+  color: var(--color-mobile-menu-text);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.mobile-menu a:hover {
+  color: var(--color-link-hover);
+}
+
+/* Close (X) button inside mobile menu */
+.mobile-menu-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-mobile-menu-text);
+  line-height: 1;
+}

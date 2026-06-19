@@ -1,0 +1,89 @@
+/* ============================================================
+   TOPICS.CSS — Styles for the Topics index page
+   (the stacked card squares for Lifestyle, Fitness, Beauty, etc.)
+   ============================================================ */
+
+/* ---- TOPICS GRID ---- */
+
+.topics-grid {
+  display: grid;
+  /* Desktop: 4 columns. Change the number to add/remove topic columns */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px 28px;                           /* Change gap between topic cards here */
+  max-width: 1000px;                        /* Change max width of topics grid here */
+  margin: 0 auto;
+  padding: 40px 0 60px;                     /* Change section padding here */
+}
+
+/* ---- TOPIC CARD (stacked paper look) ---- */
+
+.topic-card-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Back shadow layers (decorative stacked effect) */
+.topic-card-wrapper::before,
+.topic-card-wrapper::after {
+  content: '';
+  position: absolute;
+  border-radius: 6px;
+}
+
+/* Second layer (furthest back, more offset) */
+.topic-card-wrapper::before {
+  background-color: var(--color-topic-card-shadow-1); /* Change back shadow color in colors.css */
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+}
+
+/* First layer (middle) */
+.topic-card-wrapper::after {
+  background-color: var(--color-topic-card-shadow-2);
+  top: 4px;
+  left: 4px;
+  right: -4px;
+  bottom: -4px;
+}
+
+/* The front (main) card */
+.topic-card {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-topic-card-bg);       /* Change topic card bg in colors.css */
+  border: 2px solid var(--color-topic-card-border);   /* Change topic card border in colors.css */
+  border-radius: 6px;                                 /* Change topic card corner radius here */
+  padding: 28px 16px;                                 /* Change topic card inner padding here */
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.15s;
+}
+
+.topic-card:hover {
+  transform: translateY(-3px) translateX(-3px);       /* Change hover lift direction here */
+}
+
+/* Topic label text */
+.topic-card-label {
+  font-family: var(--font-topic-label);
+  font-size: var(--font-topic-label-size);
+  font-weight: 400;
+  color: var(--color-topic-card-text);                /* Change topic label color in colors.css */
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ---- TOPICS PAGE HEADING ---- */
+
+.topics-page-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-heading-size-h1);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin: 32px 0 0;                         /* Change heading top margin here */
+}

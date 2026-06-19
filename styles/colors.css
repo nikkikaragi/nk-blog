@@ -1,0 +1,49 @@
+/* ============================================================
+   COLORS.CSS — All site colors live here.
+   Change any value below to update the color everywhere on the site.
+   ============================================================ */
+
+:root {
+
+  /* --- TOP BANNER --- */
+  --color-banner-bg: #f9b8d0;           /* Change banner background color here */
+  --color-banner-text: #222222;         /* Change banner nav text color here */
+
+  /* --- PAGE BACKGROUND --- */
+  --color-page-bg: #ffffff;             /* Change main page background here */
+
+  /* --- BLOG POST CARDS (the little squares on home/topic pages) --- */
+  --color-card-bg: #fce4ec;             /* Change blog card background color here */
+  --color-card-border: #f48fb1;         /* Change blog card border color here */
+  --color-card-shadow: rgba(244,143,177,0.25); /* Change blog card shadow color here */
+  --color-card-title: #222222;          /* Change blog card title text color here */
+  --color-card-date: #888888;           /* Change blog card date text color here */
+
+  /* --- TOPIC CATEGORY CARDS (Topics page squares) --- */
+  --color-topic-card-bg: #ffffff;       /* Change topic card background here */
+  --color-topic-card-border: #f48fb1;   /* Change topic card border here */
+  --color-topic-card-shadow-1: #ffd54f; /* Change topic card back shadow (yellow) here */
+  --color-topic-card-shadow-2: #ffd54f; /* Change topic card second shadow here */
+  --color-topic-card-text: #222222;     /* Change topic card label text here */
+
+  /* --- ABOUT PAGE --- */
+  --color-about-card-bg: #fce4ec;       /* Change about card background here */
+  --color-about-card-border: #f8bbd0;   /* Change about card border here */
+
+  /* --- BLOG POST PAGE --- */
+  --color-post-card-bg: #fce4ec;        /* Change blog post page card background here */
+  --color-post-card-border: #f8bbd0;    /* Change blog post page card border here */
+
+  /* --- MOBILE MENU OVERLAY --- */
+  --color-mobile-menu-bg: #fce4ec;      /* Change mobile hamburger menu background here */
+  --color-mobile-menu-text: #222222;    /* Change mobile hamburger menu text color here */
+
+  /* --- GENERAL TEXT --- */
+  --color-text-primary: #222222;        /* Change main body text color here */
+  --color-text-secondary: #555555;      /* Change secondary/subtitle text color here */
+
+  /* --- LINKS --- */
+  --color-link: #222222;                /* Change link text color here */
+  --color-link-hover: #e91e8c;          /* Change link hover color here */
+
+}

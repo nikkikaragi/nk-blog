@@ -1,0 +1,142 @@
+/* ============================================================
+   RESPONSIVE.CSS — Mobile and tablet breakpoints.
+   This file makes the site look good on all screen sizes.
+   Rules here OVERRIDE desktop styles at smaller widths.
+   ============================================================ */
+
+
+/* ============================================================
+   TABLET — screens up to 900px wide
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  /* Blog cards: 2 columns on tablet */
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* Change tablet columns here */
+    gap: 20px;
+  }
+
+  /* Topics grid: 2 columns on tablet */
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr); /* Change tablet topic columns here */
+    gap: 28px 20px;
+    padding: 30px 0 40px;
+  }
+
+  /* About card: stack photo on top of text */
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 24px;
+    gap: 24px;
+    margin: 24px 16px 40px;
+  }
+
+  .about-photo {
+    width: 220px;                          /* Change tablet about photo width here */
+  }
+
+  /* Blog post: smaller padding */
+  .post-wrapper {
+    padding: 28px 24px;
+    margin: 20px 16px 40px;
+  }
+
+  /* Float images become full width on tablet */
+  .post-image-right,
+  .post-image-left {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE — screens up to 600px wide
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  /* ---- HIDE desktop banner, SHOW mobile banner ---- */
+  .banner {
+    display: none !important;
+  }
+
+  .mobile-banner {
+    display: flex !important;
+  }
+
+  /* ---- PAGE CONTENT ---- */
+  .page-content {
+    padding: 20px 12px 48px;               /* Change mobile page padding here */
+  }
+
+  /* Blog cards: 1 column on mobile */
+  .cards-grid {
+    grid-template-columns: 1fr;            /* Change mobile columns here (1 = single column) */
+    gap: 16px;
+  }
+
+  /* Topics grid: 2 columns on mobile (fits nicely) */
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr); /* Change mobile topic columns here */
+    gap: 24px 16px;
+    padding: 20px 0 36px;
+  }
+
+  /* About card: tighter on mobile */
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px;
+    margin: 16px 8px 36px;
+    gap: 20px;
+  }
+
+  .about-photo {
+    width: 160px;                          /* Change mobile about photo width here */
+  }
+
+  .about-heading {
+    font-size: 1.6rem;                     /* Change mobile about heading size here */
+  }
+
+  /* Blog post page */
+  .post-wrapper {
+    padding: 20px 16px;
+    margin: 12px 8px 36px;
+    border-radius: 8px;
+  }
+
+  .post-title {
+    font-size: 1.6rem;                     /* Change mobile post title size here */
+  }
+
+  .post-image-right,
+  .post-image-left {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 16px 0;
+  }
+
+  /* Topics heading */
+  .topics-page-title {
+    font-size: 1.5rem;                     /* Change mobile topics heading size here */
+  }
+
+  /* Topic card: smaller padding on mobile */
+  .topic-card {
+    padding: 20px 10px;
+  }
+
+  /* Blog card title: slightly smaller on mobile */
+  .blog-card-title {
+    font-size: 1.05rem;
+  }
+
+}

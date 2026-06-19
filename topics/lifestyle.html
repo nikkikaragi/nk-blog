@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Change page title here — e.g. "NK Blog — Lifestyle" -->
+  <title>NK Blog — Lifestyle</title>
+  <link rel="stylesheet" href="../styles/fonts.css">
+  <link rel="stylesheet" href="../styles/colors.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/banner.css">
+  <link rel="stylesheet" href="../styles/cards.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main class="page-content">
+    <!-- Change the heading to match this topic -->
+    <h1 class="topics-page-title" id="topic-heading">Lifestyle</h1>
+    <div class="cards-grid" id="topic-cards-grid"></div>
+  </main>
+
+  <script src="../scripts/posts-data.js"></script>
+  <script src="../scripts/topics-data.js"></script>
+  <script src="../scripts/cards.js"></script>
+  <script>var ROOT_PATH = '../';</script>
+  <script src="../scripts/banner-html.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      /* Change 'lifestyle' below to match this file's topic id */
+      renderCards('topic-cards-grid', 'lifestyle');
+    });
+  </script>
+
+</body>
+</html>

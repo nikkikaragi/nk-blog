@@ -1,0 +1,119 @@
+/* ============================================================
+   CARDS.CSS — Styles for blog post cards (the pink squares)
+   shown on the Home page and Topic pages.
+   ============================================================ */
+
+/* ---- PAGE WRAPPER ---- */
+
+.page-content {
+  background-color: var(--color-page-bg);   /* Change page background in colors.css */
+  min-height: 100vh;
+  padding: 32px 24px 60px;                  /* Change page padding here */
+  box-sizing: border-box;
+}
+
+/* ---- BLOG CARD GRID ---- */
+
+.cards-grid {
+  display: grid;
+  /* Desktop: 3 columns. Change the number below to add/remove columns */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;                                /* Change gap between cards here */
+  max-width: 1100px;                        /* Change max width of grid here */
+  margin: 0 auto;
+}
+
+
+/* ---- INDIVIDUAL BLOG CARD ---- */
+
+.blog-card {
+  background-color: var(--color-card-bg);   /* Change card background in colors.css */
+  border: 1.5px solid var(--color-card-border); /* Change card border in colors.css */
+  border-radius: 10px;                      /* Change card corner roundness here */
+  box-shadow: 3px 4px 12px var(--color-card-shadow); /* Change card shadow in colors.css */
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);              /* Change card hover lift amount here */
+  box-shadow: 5px 8px 20px var(--color-card-shadow);
+}
+
+/* Card thumbnail image */
+.blog-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;                     /* Change image aspect ratio here */
+  object-fit: cover;
+  display: block;
+  background-color: #f0d6e0;               /* Fallback color if image missing */
+}
+
+/* Card text area below the image */
+.blog-card-body {
+  padding: 12px 14px 16px;                 /* Change card inner padding here */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Card title */
+.blog-card-title {
+  font-family: var(--font-card-title);
+  font-size: var(--font-card-title-size);
+  font-weight: var(--font-card-title-weight);
+  color: var(--color-card-title);           /* Change card title color in colors.css */
+  margin: 0;
+  line-height: 1.3;
+
+  /* Truncate long titles with ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Card date */
+.blog-card-date {
+  font-family: var(--font-card-date);
+  font-size: var(--font-card-date-size);
+  color: var(--color-card-date);            /* Change card date color in colors.css */
+  font-style: italic;
+  margin: 0;
+}
+
+/* Card excerpt (shown when no image is available) */
+.blog-card-excerpt {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 4px 0 0;
+  line-height: 1.5;
+
+  /* Show only a few lines then ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;                    /* Change number of excerpt lines here */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Card category badge (small label like "Lifestyle") */
+.blog-card-category {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  background-color: var(--color-card-border);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-bottom: 2px;
+  width: fit-content;
+}

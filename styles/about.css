@@ -1,0 +1,55 @@
+/* ============================================================
+   ABOUT.CSS — Styles for the About Me page
+   ============================================================ */
+
+/* ---- ABOUT CARD CONTAINER ---- */
+
+.about-card {
+  background-color: var(--color-about-card-bg);       /* Change about card bg in colors.css */
+  border: 1px solid var(--color-about-card-border);   /* Change about card border in colors.css */
+  border-radius: 12px;                                /* Change about card corner radius here */
+  max-width: 900px;                                   /* Change about card max width here */
+  margin: 40px auto 60px;                             /* Change about card vertical margin here */
+  padding: 36px 40px;                                 /* Change about card inner padding here */
+  display: flex;
+  gap: 40px;                                          /* Change gap between photo and text here */
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* ---- ABOUT PHOTO ---- */
+
+.about-photo {
+  flex-shrink: 0;
+  width: 280px;                                       /* Change about photo width here */
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;                                 /* Change photo corner radius here */
+  object-fit: cover;
+}
+
+/* ---- ABOUT TEXT ---- */
+
+.about-text {
+  flex: 1;
+}
+
+.about-heading {
+  font-family: var(--font-about-heading);             /* Change About heading font in fonts.css */
+  font-size: var(--font-heading-size-h1);
+  color: var(--color-text-primary);
+  margin: 0 0 18px 0;                                 /* Change heading bottom margin here */
+}
+
+.about-body {
+  font-family: var(--font-about-body);                /* Change About body font in fonts.css */
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  color: var(--color-text-primary);
+  text-indent: 2em;                                   /* Change paragraph indent here (or set to 0) */
+  margin: 0;
+}
