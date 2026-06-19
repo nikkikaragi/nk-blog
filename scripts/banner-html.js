@@ -97,8 +97,28 @@ document.addEventListener('DOMContentLoaded', function () {
   header.innerHTML = bannerHTML;
 
   // Load the hamburger toggle script after banner is in the DOM
-  var script = document.createElement('script');
-  script.src = ROOT_PATH + 'scripts/banner.js';
-  document.body.appendChild(script);
+  // Wire up hamburger menu immediately after injecting HTML
+  var hamburgerBtn = document.getElementById('hamburger-btn');
+  var mobileMenu   = document.getElementById('mobile-menu');
+  var closeBtn     = document.getElementById('mobile-menu-close');
+
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener('click', function () {
+      mobileMenu.classList.add('open');
+    });
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+      });
+    }
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.remove('open');
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') mobileMenu.classList.remove('open');
+    });
+  }
 
 });

@@ -38,23 +38,21 @@ function renderCards(containerId, filterTopic) {
   posts.forEach(function (post) {
 
     /* ---- Build image OR excerpt block ---- */
-    var imageOrExcerpt = '';
+    html += '<a class="blog-card" href="' + post.file + '">';
 
     if (post.image) {
-      // Post has a thumbnail image
-      imageOrExcerpt = '<img class="blog-card-image" src="' + post.image + '" alt="' + post.title + '" loading="lazy">';
-    } else if (post.excerpt) {
-      // No image — show excerpt text instead
-      imageOrExcerpt = '<p class="blog-card-excerpt">' + post.excerpt + ' ...</p>';
+      html += '<img class="blog-card-image" src="' + post.image + '" alt="' + post.title + '" loading="lazy">';
     }
 
-    /* ---- Assemble card HTML ---- */
-    html += '<a class="blog-card" href="' + post.file + '">';
-    html +=   imageOrExcerpt;
-    html +=   '<div class="blog-card-body">';
-    html +=     '<p class="blog-card-title">' + post.title + '</p>';
-    html +=     '<p class="blog-card-date">' + post.date + '</p>';
-    html +=   '</div>';
+    html += '<div class="blog-card-body">';
+    html +=   '<p class="blog-card-title">' + post.title + '</p>';
+    html +=   '<p class="blog-card-date">' + post.date + '</p>';
+
+    if (!post.image && post.excerpt) {
+      html += '<p class="blog-card-excerpt">' + post.excerpt + '</p>';
+    }
+
+    html += '</div>';
     html += '</a>';
 
   });
