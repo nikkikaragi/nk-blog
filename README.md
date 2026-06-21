@@ -1,9 +1,3 @@
-# NK Blog
-
-A clean, responsive personal blog. Cutesy aesthetic, mobile-first, easy to edit.
-
----
-
 ## Folder Structure
 
 ```
