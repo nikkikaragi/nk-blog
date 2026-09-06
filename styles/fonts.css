@@ -23,12 +23,12 @@
 :root {
 
   /* --- BANNER / NAV FONT --- */
-  --font-nav: 'Caveat', cursive;           /* Change banner nav font here */
+  --font-nav: 'Playfair Display', cursive;           /* Change banner nav font here */
   --font-nav-size: 1.6rem;                 /* Change banner nav font size here */
   --font-nav-weight: 600;                  /* Change banner nav font weight here */
 
   /* --- BLOG CARD TITLE FONT --- */
-  --font-card-title: 'Caveat', cursive;    /* Change blog card title font here */
+  --font-card-title: 'Playfair Display', cursive;    /* Change blog card title font here */
   --font-card-title-size: 1.2rem;          /* Change blog card title size here */
   --font-card-title-weight: 600;           /* Change blog card title weight here */
 
@@ -41,7 +41,7 @@
   --font-topic-label-size: 1.05rem;        /* Change topic card label size here */
 
   /* --- PAGE HEADINGS (h1, h2) --- */
-  --font-heading: 'Caveat', cursive;       /* Change page heading font here */
+  --font-heading: 'Playfair Display', cursive;       /* Change page heading font here */
   --font-heading-size-h1: 2.2rem;          /* Change H1 size here */
   --font-heading-size-h2: 1.6rem;          /* Change H2 size here */
 
@@ -51,7 +51,7 @@
   --font-body-line-height: 1.8;           /* Change body line height here */
 
   /* --- ABOUT PAGE --- */
-  --font-about-heading: 'Caveat', cursive; /* Change About page heading font here */
+  --font-about-heading: 'Playfair Display', cursive; /* Change About page heading font here */
   --font-about-body: 'Lato', sans-serif;   /* Change About page body font here */
 
 }
